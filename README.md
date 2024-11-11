@@ -1,6 +1,6 @@
 #Integrantes 
-#Jonas Canaza : Dueño del repo
+#Maria Dolores Caparroz : Dueño del repo
+#Jonas Canaza 
 #Juan Bautista Castignani
-#Maria Dolores Caparroz
 #Agustin Juan Cirera Ruggiero
 #Ezequiel Facundo Prieto Valdez
