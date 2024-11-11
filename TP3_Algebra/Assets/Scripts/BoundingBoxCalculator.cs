@@ -22,6 +22,12 @@ public sealed class BoundingBoxCalculator : MonoBehaviour
 
     private void UpdateBounds()
     {
+        // Asegúrate de que renderers esté inicializado
+        if (renderers == null)
+        {
+            renderers = GetComponentsInChildren<Renderer>();
+        }
+
         ObjectBounds.Clear();
 
         foreach (Renderer rend in renderers)
@@ -65,6 +71,12 @@ public sealed class BoundingBoxCalculator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // Asegúrate de que renderers esté inicializado antes de actualizar los Bounds
+        if (renderers == null)
+        {
+            renderers = GetComponentsInChildren<Renderer>();
+        }
+
         // Llamar a UpdateBounds para actualizar los Bounds mientras se dibujan los Gizmos
         UpdateBounds();
 

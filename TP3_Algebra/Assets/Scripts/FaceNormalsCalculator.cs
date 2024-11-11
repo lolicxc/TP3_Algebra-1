@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class FaceNormalsCalculator : MonoBehaviour
 {
+
+    void Start()
+    {
+        CalculateFaceNormals();
+    }
+
     void CalculateFaceNormals()
     {
         Mesh mesh = GetComponent<MeshFilter>().mesh;
