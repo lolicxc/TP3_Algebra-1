@@ -14,6 +14,12 @@ public sealed class BoundingBoxCalculator : MonoBehaviour
         renderers = GetComponentsInChildren<Renderer>();
     }
 
+    private void Update()
+    {
+        // Actualizar los Bounds en cada frame para que siempre estén actualizados
+        UpdateBounds();
+    }
+
     private void UpdateBounds()
     {
         ObjectBounds.Clear();
@@ -59,7 +65,7 @@ public sealed class BoundingBoxCalculator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Actualizar los Bounds cada vez que se dibujan los Gizmos
+        // Llamar a UpdateBounds para actualizar los Bounds mientras se dibujan los Gizmos
         UpdateBounds();
 
         if (ObjectBounds == null || ObjectBounds.Count == 0)
